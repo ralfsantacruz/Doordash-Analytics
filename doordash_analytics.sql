@@ -3,7 +3,7 @@ SELECT dayofweek(sub.dates) as "day of week", avg(sub.total/sub.difference) as "
 FROM (
 	SELECT dash_end_time as "dates",
     sum(total_pay) as "total",
-    sum(datediff(hour, dash_end_time,dash_start_time))) as "hours_worked"
+    sum(datediff(second, dash_end_time,dash_start_time)/3600.0)) as "hours_worked"
     FROM Dash
     GROUP BY dash_end_time
     )
@@ -38,7 +38,7 @@ FROM (
 	sub1.dasher_id as "dasher_id"
 	FROM (
 		SELECT sum(d.total_pay) as "total",
-		sum(datediff(hour,d.dash_start_time,d.dash_end_time))) as "hours_worked",
+		sum(datediff(second,d.dash_start_time,d.dash_end_time)/3600.0)) as "hours_worked",
 		da.email_address as "email",
 		d.dasher_id
 		FROM Dash d
