@@ -18,3 +18,5 @@ A couple of upsides to this:
  I went ahead and took it a step further and calculated the difference in time from when the customer places their order to when they receive their food to uncover some insights on how customers spend. 
  
  ![time_elapsed_vs_order_total](time_elapsed_vs_order_total.png)
+
+![time_elapsed_vs_refunds](time_elapsed_vs_refunds.png)
