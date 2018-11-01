@@ -41,10 +41,12 @@ However, this graph does NOT take into account potential mistakes on the restaur
 Here is a quick summary of the time it takes for a customer to receive their order. As mentioned above, we see that the median time is 43 minutes. These facts are for On Demand orders. 
 (NOTE: Due to the nature of the data, median is the best measurement for this case, and not the mean. Since datetimes in the dataset do not include months, Python will return negative datetimes with normalized minutes.)
 We do see an extreme outlier of 2 days!
+
+
 ![summary.PNG](images/summary.PNG)
 
  ---------------------
 Here we take a deeper dive into the outlier and notice a couple of things that could be improved on the backend. 
 There is a clear indication that there was could have been a glitch in the system where the customer ordered ahead of time and it was flagged as "Is_ASAP" == True.
 While this outlier was certainly omitted from my analyses and graphs, it may be worth checking out when the codebase is being reviewed. to provide accurate assessments of the data. 
-![outlier_1.PNG][images/outlier_1.PNG)
+![outlier_1.PNG](images/outlier_1.PNG)
